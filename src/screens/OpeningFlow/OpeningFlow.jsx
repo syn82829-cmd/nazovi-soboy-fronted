@@ -26,19 +26,34 @@ const phraseScene = [
 
 export function OpeningFlow() {
   const [name, setName] = useState('');
-  const confirmationShown = useRef(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const isWaitingForAnswer = useRef(false);
+  const inputRef = useRef(null);
 
   function handleSubmit(event) {
     event.preventDefault();
   }
 
   function handleSearchIntent() {
-    if (confirmationShown.current) {
+    if (isSearchOpen || isWaitingForAnswer.current) {
       return;
     }
 
-    confirmationShown.current = true;
-    confirmSearch();
+    isWaitingForAnswer.current = true;
+
+    confirmSearch((accepted) => {
+      isWaitingForAnswer.current = false;
+
+      if (!accepted) {
+        return;
+      }
+
+      setIsSearchOpen(true);
+
+      window.requestAnimationFrame(() => {
+        inputRef.current?.focus();
+      });
+    });
   }
 
   return (
@@ -67,6 +82,8 @@ export function OpeningFlow() {
           onChange={(event) => setName(event.target.value)}
           onSubmit={handleSubmit}
           onSearchIntent={handleSearchIntent}
+          inputRef={inputRef}
+          isOpen={isSearchOpen}
         />
       </div>
     </section>
