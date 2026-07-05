@@ -1,13 +1,15 @@
 import './FloatingPhrase.css';
 
-export function FloatingPhrase({ children, lane = 0, speed = 'medium', delay = 0 }) {
+export function FloatingPhrase({ children, x = '50%', y = '90%', duration = 24, delay = 0 }) {
   const style = {
-    '--phrase-lane': lane,
+    '--phrase-x': x,
+    '--phrase-y': y,
+    '--phrase-duration': `${duration}s`,
     '--phrase-delay': `${delay}s`
   };
 
   return (
-    <div className={`floating-phrase floating-phrase--${speed}`} style={style}>
+    <div className="floating-phrase" style={style}>
       {children}
     </div>
   );
