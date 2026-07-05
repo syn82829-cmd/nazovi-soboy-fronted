@@ -14,9 +14,8 @@ export function InfoHint({ isOpen, onOpen, onClose, showButton = true }) {
           <button className="info-hint__backdrop" type="button" onClick={onClose} aria-label="Закрыть" />
 
           <div className="info-hint__card">
-            <p>Здесь не ищут ответ.</p>
-            <p>Здесь называют то,<br />с чем пришли.</p>
-            <p>Начните с «я…»</p>
+            <p>Здесь не нужно<br />уже быть собой.</p>
+            <p>Здесь нет<br />неправильного ответа.</p>
 
             <button className="info-hint__stay" type="button" onClick={onClose}>
               Остаться
