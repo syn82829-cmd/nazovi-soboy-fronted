@@ -109,6 +109,7 @@ export function OpeningFlow() {
         isOpen={isInfoOpen}
         onOpen={() => setIsInfoOpen(true)}
         onClose={() => setIsInfoOpen(false)}
+        showButton={false}
       />
     </section>
   );
