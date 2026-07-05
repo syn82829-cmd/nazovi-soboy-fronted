@@ -27,6 +27,7 @@ const phraseScene = [
 export function OpeningFlow() {
   const [name, setName] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isSearchLifted, setIsSearchLifted] = useState(false);
   const isWaitingForAnswer = useRef(false);
   const inputRef = useRef(null);
 
@@ -48,16 +49,17 @@ export function OpeningFlow() {
         return;
       }
 
+      setIsSearchLifted(true);
       setIsSearchOpen(true);
 
-      window.requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
         inputRef.current?.focus();
       });
     });
   }
 
   return (
-    <section className="opening-flow">
+    <section className={`opening-flow ${isSearchLifted ? 'opening-flow--search-lifted' : ''}`}>
       <div className="opening-flow__phrases" aria-hidden="true">
         {floatingPhrases.map((phrase, index) => {
           const scene = phraseScene[index % phraseScene.length];
