@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 import { App } from './app/App.jsx';
 
-import './styles/reset.css';
+import './styles/base.css';
 import './styles/tokens.css';
 import './styles/global.css';
 
