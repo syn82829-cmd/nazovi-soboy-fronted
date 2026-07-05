@@ -99,11 +99,17 @@ export function OpeningFlow() {
         />
 
         <InfoHint
-          isOpen={isInfoOpen}
+          isOpen={false}
           onOpen={() => setIsInfoOpen(true)}
           onClose={() => setIsInfoOpen(false)}
         />
       </div>
+
+      <InfoHint
+        isOpen={isInfoOpen}
+        onOpen={() => setIsInfoOpen(true)}
+        onClose={() => setIsInfoOpen(false)}
+      />
     </section>
   );
 }
