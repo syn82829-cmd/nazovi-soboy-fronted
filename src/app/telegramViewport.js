@@ -23,7 +23,7 @@ export function openTelegramFullscreen() {
 
 export function confirmSearch() {
   const webApp = getTelegramWebApp();
-  const text = 'Вы уверены, что хотите искать?';
+  const text = 'Искать?';
 
   if (webApp && typeof webApp.showConfirm === 'function') {
     webApp.showConfirm(text);
