@@ -1,0 +1,16 @@
+.message {
+  max-width: 84%;
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.message--ai {
+  align-self: flex-start;
+  color: var(--text-muted);
+}
+
+.message--human {
+  align-self: flex-end;
+}
