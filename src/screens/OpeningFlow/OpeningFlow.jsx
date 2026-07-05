@@ -8,20 +8,20 @@ import { floatingPhrases } from '../../data/floatingPhrases.js';
 import './OpeningFlow.css';
 
 const phraseScene = [
-  { x: '18%', y: '82%', duration: 26, delay: -1 },
-  { x: '72%', y: '92%', duration: 27, delay: -5 },
-  { x: '42%', y: '104%', duration: 28, delay: -9 },
-  { x: '83%', y: '116%', duration: 29, delay: -13 },
-  { x: '28%', y: '128%', duration: 30, delay: -17 },
-  { x: '62%', y: '140%', duration: 31, delay: -21 },
-  { x: '21%', y: '152%', duration: 32, delay: -25 },
-  { x: '78%', y: '164%', duration: 33, delay: -29 },
-  { x: '46%', y: '176%', duration: 34, delay: -33 },
-  { x: '84%', y: '188%', duration: 35, delay: -37 },
-  { x: '24%', y: '200%', duration: 36, delay: -41 },
-  { x: '58%', y: '212%', duration: 37, delay: -45 },
-  { x: '50%', y: '224%', duration: 39, delay: -49 },
-  { x: '76%', y: '236%', duration: 40, delay: -53 }
+  { x: '20%', y: '122%', duration: 31, delay: -2 },
+  { x: '54%', y: '136%', duration: 34, delay: -7 },
+  { x: '80%', y: '150%', duration: 33, delay: -12 },
+  { x: '32%', y: '164%', duration: 36, delay: -17 },
+  { x: '68%', y: '178%', duration: 35, delay: -22 },
+  { x: '16%', y: '192%', duration: 38, delay: -27 },
+  { x: '48%', y: '206%', duration: 37, delay: -32 },
+  { x: '82%', y: '220%', duration: 40, delay: -37 },
+  { x: '28%', y: '234%', duration: 39, delay: -42 },
+  { x: '62%', y: '248%', duration: 42, delay: -47 },
+  { x: '18%', y: '262%', duration: 41, delay: -52 },
+  { x: '74%', y: '276%', duration: 44, delay: -57 },
+  { x: '44%', y: '290%', duration: 45, delay: -62 },
+  { x: '84%', y: '304%', duration: 46, delay: -67 }
 ];
 
 export function OpeningFlow() {
