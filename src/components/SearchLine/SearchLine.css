@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 430px;
-  max-width: 82vw;
+  width: 360px;
+  max-width: calc(100vw - 118px);
   height: 54px;
   padding: 0 22px;
   border: 1px solid rgba(255, 255, 255, 0.12);
