@@ -1,0 +1,49 @@
+.floating-phrase {
+  position: absolute;
+  left: calc(10vw + var(--phrase-lane) * 18vw);
+  bottom: -80px;
+  width: max-content;
+  max-width: 76vw;
+  padding: 12px 18px;
+  border: 1px solid var(--border-phrase);
+  border-radius: var(--radius-phrase);
+  background: var(--surface-phrase);
+  color: var(--text-faint);
+  backdrop-filter: blur(14px);
+  animation-name: phrase-float;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--phrase-delay);
+}
+
+.floating-phrase--slow {
+  animation-duration: var(--float-slow);
+}
+
+.floating-phrase--medium {
+  animation-duration: var(--float-medium);
+}
+
+.floating-phrase--fast {
+  animation-duration: var(--float-fast);
+}
+
+@keyframes phrase-float {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  84% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-112vh);
+    opacity: 0;
+  }
+}
