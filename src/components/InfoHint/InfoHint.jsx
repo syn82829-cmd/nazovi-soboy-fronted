@@ -1,11 +1,13 @@
 import './InfoHint.css';
 
-export function InfoHint({ isOpen, onOpen, onClose }) {
+export function InfoHint({ isOpen, onOpen, onClose, showButton = true }) {
   return (
     <>
-      <button className="info-hint__button" type="button" onClick={onOpen} aria-label="Что здесь">
-        ?
-      </button>
+      {showButton && (
+        <button className="info-hint__button" type="button" onClick={onOpen} aria-label="Что здесь">
+          ?
+        </button>
+      )}
 
       {isOpen && (
         <div className="info-hint" role="dialog" aria-modal="true" aria-label="Что здесь">
